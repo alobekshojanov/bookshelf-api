@@ -1,0 +1,140 @@
+2026-03-09T09:52:27.797+05:00  INFO 33819 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Starting BookShelfApplication using Java 17.0.16 with PID 33819 (/Users/alobekm4/Downloads/bookshelf-api/target/classes started by alobekm4 in /Users/alobekm4/Downloads/bookshelf-api)
+2026-03-09T09:52:27.807+05:00 DEBUG 33819 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-09T09:52:27.807+05:00  INFO 33819 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : The following 1 profile is active: "local"
+2026-03-09T09:52:28.361+05:00  INFO 33819 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T09:52:28.398+05:00  INFO 33819 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2026-03-09T09:52:28.720+05:00  INFO 33819 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-09T09:52:28.727+05:00  INFO 33819 --- [BookShelf] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T09:52:28.727+05:00  INFO 33819 --- [BookShelf] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-09T09:52:28.760+05:00  INFO 33819 --- [BookShelf] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 921 ms
+2026-03-09T09:52:28.822+05:00  INFO 33819 --- [BookShelf] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09T09:52:28.855+05:00  INFO 33819 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-09T09:52:29.092+05:00  INFO 33819 --- [BookShelf] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T09:52:29.111+05:00  INFO 33819 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-09T09:52:29.169+05:00  INFO 33819 --- [BookShelf] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ae958b0
+2026-03-09T09:52:29.170+05:00  INFO 33819 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-09T09:52:29.222+05:00  INFO 33819 --- [BookShelf] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/DB_BookShelf]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 14.19
+	Default catalog/schema: DB_BookShelf/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09T09:52:29.789+05:00  INFO 33819 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T09:52:29.847+05:00  INFO 33819 --- [BookShelf] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T09:52:29.886+05:00  INFO 33819 --- [BookShelf] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-09T09:52:30.342+05:00 DEBUG 33819 --- [BookShelf] [main] c.a.b.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-03-09T09:52:31.239+05:00  WARN 33819 --- [BookShelf] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T09:52:31.277+05:00  INFO 33819 --- [BookShelf] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-09T09:52:31.585+05:00  INFO 33819 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-09T09:52:31.591+05:00  INFO 33819 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Started BookShelfApplication in 4.182 seconds (process running for 4.472)
+2026-03-09T09:52:31.593+05:00  WARN 33819 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-09T09:52:31.593+05:00  WARN 33819 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-09T09:54:44.710+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09T09:54:44.710+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-09T09:54:44.712+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-09T09:54:45.299+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 316 ms
+2026-03-09T09:55:06.610+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-10] c.a.bookshelf.controller.AuthController  : Login: user22
+2026-03-09T09:57:13.683+05:00  INFO 33819 --- [BookShelf] [http-nio-8080-exec-8] c.a.bookshelf.controller.AuthController  : Login: admin2
+2026-03-09T10:02:44.654+05:00  INFO 33819 --- [BookShelf] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09T10:02:44.656+05:00  INFO 33819 --- [BookShelf] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-09T10:02:44.660+05:00  INFO 33819 --- [BookShelf] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:02:44.661+05:00  INFO 33819 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-09T10:02:44.662+05:00  INFO 33819 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-09T10:13:00.569+05:00  INFO 34020 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Starting BookShelfApplication using Java 17.0.16 with PID 34020 (/Users/alobekm4/Downloads/bookshelf-api/target/classes started by alobekm4 in /Users/alobekm4/Downloads/bookshelf-api)
+2026-03-09T10:13:00.578+05:00 DEBUG 34020 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-09T10:13:00.579+05:00  INFO 34020 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : The following 1 profile is active: "local"
+2026-03-09T10:13:01.136+05:00  INFO 34020 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T10:13:01.176+05:00  INFO 34020 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 6 JPA repository interfaces.
+2026-03-09T10:13:01.465+05:00  INFO 34020 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-09T10:13:01.472+05:00  INFO 34020 --- [BookShelf] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T10:13:01.473+05:00  INFO 34020 --- [BookShelf] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-09T10:13:01.504+05:00  INFO 34020 --- [BookShelf] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 886 ms
+2026-03-09T10:13:01.566+05:00  INFO 34020 --- [BookShelf] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09T10:13:01.594+05:00  INFO 34020 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-09T10:13:01.821+05:00  INFO 34020 --- [BookShelf] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T10:13:01.846+05:00  INFO 34020 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-09T10:13:01.910+05:00  INFO 34020 --- [BookShelf] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ae958b0
+2026-03-09T10:13:01.911+05:00  INFO 34020 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-09T10:13:01.955+05:00  INFO 34020 --- [BookShelf] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/DB_BookShelf]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 14.19
+	Default catalog/schema: DB_BookShelf/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09T10:13:02.522+05:00  INFO 34020 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T10:13:02.574+05:00  INFO 34020 --- [BookShelf] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:13:02.611+05:00  INFO 34020 --- [BookShelf] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-09T10:13:03.040+05:00 DEBUG 34020 --- [BookShelf] [main] c.a.b.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-03-09T10:13:03.899+05:00  WARN 34020 --- [BookShelf] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T10:13:03.937+05:00  INFO 34020 --- [BookShelf] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-09T10:13:04.247+05:00  INFO 34020 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-09T10:13:04.253+05:00  INFO 34020 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Started BookShelfApplication in 4.048 seconds (process running for 4.36)
+2026-03-09T10:13:04.255+05:00  WARN 34020 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-09T10:13:04.255+05:00  WARN 34020 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-09T10:13:14.597+05:00  INFO 34020 --- [BookShelf] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09T10:13:14.598+05:00  INFO 34020 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-09T10:13:14.599+05:00  INFO 34020 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-09T10:13:15.138+05:00  INFO 34020 --- [BookShelf] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 291 ms
+2026-03-09T10:15:24.804+05:00  INFO 34020 --- [BookShelf] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09T10:15:24.808+05:00  INFO 34020 --- [BookShelf] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-09T10:15:24.812+05:00  INFO 34020 --- [BookShelf] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:15:24.814+05:00  INFO 34020 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-09T10:15:24.815+05:00  INFO 34020 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-09T10:47:34.687+05:00  INFO 34326 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Starting BookShelfApplication using Java 17.0.16 with PID 34326 (/Users/alobekm4/Downloads/bookshelf-api/target/classes started by alobekm4 in /Users/alobekm4/Downloads/bookshelf-api)
+2026-03-09T10:47:34.695+05:00 DEBUG 34326 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-03-09T10:47:34.696+05:00  INFO 34326 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : The following 1 profile is active: "local"
+2026-03-09T10:47:35.242+05:00  INFO 34326 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T10:47:35.279+05:00  INFO 34326 --- [BookShelf] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2026-03-09T10:47:35.591+05:00  INFO 34326 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-09T10:47:35.598+05:00  INFO 34326 --- [BookShelf] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T10:47:35.599+05:00  INFO 34326 --- [BookShelf] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-09T10:47:35.630+05:00  INFO 34326 --- [BookShelf] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 896 ms
+2026-03-09T10:47:35.688+05:00  INFO 34326 --- [BookShelf] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09T10:47:35.715+05:00  INFO 34326 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-03-09T10:47:35.929+05:00  INFO 34326 --- [BookShelf] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T10:47:35.945+05:00  INFO 34326 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-09T10:47:36.015+05:00  INFO 34326 --- [BookShelf] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ae958b0
+2026-03-09T10:47:36.015+05:00  INFO 34326 --- [BookShelf] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-09T10:47:36.055+05:00  INFO 34326 --- [BookShelf] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/DB_BookShelf]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 14.19
+	Default catalog/schema: DB_BookShelf/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09T10:47:36.593+05:00  INFO 34326 --- [BookShelf] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T10:47:36.647+05:00  INFO 34326 --- [BookShelf] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:47:36.685+05:00  INFO 34326 --- [BookShelf] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-09T10:47:37.131+05:00 DEBUG 34326 --- [BookShelf] [main] c.a.b.config.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-03-09T10:47:38.107+05:00  WARN 34326 --- [BookShelf] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T10:47:38.148+05:00  INFO 34326 --- [BookShelf] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-03-09T10:47:38.460+05:00  INFO 34326 --- [BookShelf] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-09T10:47:38.466+05:00  INFO 34326 --- [BookShelf] [main] c.alobek.bookshelf.BookShelfApplication  : Started BookShelfApplication in 4.146 seconds (process running for 4.427)
+2026-03-09T10:47:38.467+05:00  WARN 34326 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-09T10:47:38.467+05:00  WARN 34326 --- [BookShelf] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-03-09T10:47:45.450+05:00  INFO 34326 --- [BookShelf] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09T10:47:45.450+05:00  INFO 34326 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-09T10:47:45.451+05:00  INFO 34326 --- [BookShelf] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-09T10:47:46.104+05:00  INFO 34326 --- [BookShelf] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 358 ms
+2026-03-09T10:48:07.802+05:00  INFO 34326 --- [BookShelf] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09T10:48:07.806+05:00  INFO 34326 --- [BookShelf] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-09T10:48:07.812+05:00  INFO 34326 --- [BookShelf] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T10:48:07.813+05:00  INFO 34326 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-09T10:48:07.814+05:00  INFO 34326 --- [BookShelf] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

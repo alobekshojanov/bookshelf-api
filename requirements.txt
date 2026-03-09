@@ -1,0 +1,440 @@
+********************* BookShelf API *********************
+The BookShelf system must meet the following requirements:
+[1]. Public Book Listing
+    When users access the platform, they should be able to see a list of available books.
+	•	The latest added books must appear first
+	•	A search functionality must be available (by title or author)
+	•	Pagination must be used to browse through all books
+
+    When a user clicks on a specific book, they should be able to view it on a separate detail page, which displays:
+	•	Book cover image
+	•	Full description
+	•	Author information
+	•	Created date
+    Only authenticated users can perform actions such as borrowing books.
+[2]. User Registration & Authentication
+Users must be able to register and log in to the system.
+	•	During registration, users provide:
+	◦	Name
+	◦	Email or Phone number
+	◦	Password
+	•	Registration using phone number must also be supported
+	•	Email or phone number must be verified during registration
+Login must be performed using Email/Phone + Password.
+A forgot password / reset password feature must be available.
+
+[3]. Book Management
+Administrators can create new books by providing:
+	•	Book title
+	•	Author name
+	•	Book description (minimum 100 characters)
+	•	Cover image
+Administrators must be able to:
+	•	View all books
+	•	Update book information
+	•	Delete books
+Regular users can only view books and interact through borrowing.
+
+[4]. User Profile Management
+Authenticated users must be able to:
+	•	View their profile information
+	•	Update their name
+	•	Update email or phone number
+When changing email or phone number, verification is required.
+
+[5]. Borrowing System
+        Authenticated users must be able to:
+	•	Borrow available books
+	•	Return borrowed books
+	•	View their own borrowing history
+
+        The system must track:
+	•	Borrow date
+	•	Return date
+
+
+[6]. Administration Features
+        Administrators must be able to:
+	•	View a list of all users
+	•	View user details
+	•	Block or unblock users
+        Blocked users must not be able to log in or use the system.
+
+
+[7]. Borrowing System & History
+Authenticated users must be able to borrow and return books.
+	•	A user can borrow a book if it is available
+	•	A borrowed book can later be returned
+	•	The system must store borrowing history, including:
+	◦	Borrow date
+	◦	Return date
+Users must be able to view their own borrowing history, while administrators
+can view borrowing history of all users.
+This functionality demonstrates:
+	•	Entity relationships
+	•	Business logic enforcement
+	•	Multi-endpoint workflows
+
+[8]. Search & Filtering
+The system must support advanced search and filtering for books.
+Users must be able to:
+	•	Search books by title or author
+	•	Filter books by:
+	◦	Author
+	◦	Publication year
+	◦	Category
+Search and filter results must support pagination.
+This feature demonstrates:
+	•	Custom database queries
+	•	Efficient pagination
+	•	Dynamic filtering logic
+
+[9]. User Roles & Permissions
+The system must implement role-based access control.
+Supported roles:
+	•	USER
+	•	ADMIN
+Access rules:
+	•	USERS can view and borrow books
+	•	ADMINS can create, update, and delete books
+	•	ADMINS can manage users (block/unblock)
+Unauthorized access to restricted endpoints must be denied.
+This demonstrates:
+	•	Spring Security configuration
+	•	JWT authorization
+	•	Secure endpoint protection
+
+[10]. API Documentation (Swagger UI)
+All REST APIs must be documented using Swagger / OpenAPI.
+	•	Each endpoint must include:
+	◦	Request parameters
+	◦	Request body (if applicable)
+	◦	Response structure
+	•	APIs must be testable directly via Swagger UI
+This allows:
+	•	Easy API testing
+	•	Clear communication with clients
+	•	Backend demonstration without frontend
+
+[11]. Validation & Global Error Handling
+The system must validate all incoming requests.
+Examples:
+	•	Book title must not be empty
+	•	Book description must contain at least 100 characters
+	•	Required fields must be enforced
+Validation errors and system exceptions must return:
+	•	Clear error messages
+	•	Appropriate HTTP status codes
+This demonstrates:
+	•	Clean API design
+	•	Robust backend logic
+	•	User-friendly error handling
+
+[12]. Logging & Audit Tracking
+The system must log important actions, such as:
+	•	Book creation
+	•	Book updates
+	•	Book deletion
+	•	User blocking/unblocking
+Logs must include:
+	•	Action type
+	•	Timestamp
+	•	User performing the action
+This demonstrates:
+	•	Professional backend practices
+	•	System observability
+	•	Production-readiness
+
+----- Used Technologies and Frameworks
+The BookShelf API is built using the following technologies and frameworks:
+	1	Spring Boot - Used as the core framework for building RESTful backend services and managing application configuration.
+	2	Spring Security + BCrypt Algorithm - Used for authentication and authorization, including:
+	◦	JWT-based security
+	◦	Role-based access control (USER, ADMIN)
+	◦	Secure password hashing using BCrypt
+	3	Spring Data JPA + Hibernate + PostgreSQL - Used for database interaction and persistence:
+	◦	PostgreSQL as the relational database
+	◦	Hibernate as the ORM framework
+	◦	Spring Data JPA for repository abstraction and query handling
+	4	Property Files - Used for managing application configurations such as:
+	◦	Database settings
+	◦	Security parameters
+	◦	Email/SMS configurations
+	◦	Environment-specific properties
+	5	Internationalization (i18n) - Used to support multiple languages in API responses and validation messages.
+	6	Maven - Used as the build and dependency management tool.
+	7	Email & SMS Integration (Registration & Password Reset) - Used for:
+	◦	Account verification during registration
+	◦	Password reset confirmation
+	◦	Sending verification codes via Email and SMS
+	8	Flyway Database Migration - Used for:
+	◦	Version-controlled database schema migrations
+	◦	Consistent database structure across environments
+	9	Logging - Used to track important system events such as:
+	◦	User authentication
+	◦	Book creation, updates, and deletion
+	◦	Administrative actions
+	◦	Error and exception tracking
+	10	Swagger / OpenAPI - Used for:
+	◦	API documentation
+	◦	Interactive API testing
+	◦	Backend demonstration without frontend
+
+----- Main Objectives
+	•	Build a backend project from scratch (0 → production-ready)
+	•	Configure and use multiple technologies together in a single project
+	•	Design and implement a scalable backend architecture
+	•	Understand how the frontend interacts with backend APIs (REST principles)
+	•	Implement USER / ADMIN roles with proper authorization rules
+	•	Design a well-structured database architecture
+	•	Implement Registration, Login, and Reset Password workflows
+	•	Apply security best practices (JWT, password hashing, protected endpoints)
+	•	Work with real-world backend features such as pagination, filtering, and validation
+	•	Document and test APIs using Swagger/OpenAPI
+
+********************* BookShelf API *********************
+----- APIs
+1. ######## Auth ########
+        1. Registration (User sign up)
+            Request
+            {
+              "name": "string",
+              "username": "email or phone",
+              "password": "string"
+            }
+            Response
+                Status: OK
+
+        2. Registration Confirm (Email / Phone verification)
+            (Email confirm API and Phone confirm API should be separate)
+            Request  - Depends on confirmation logic (token / code)
+
+            Response
+            {
+              "name": "string",
+              "username": "string",
+              "roleList": ["USER"],
+              "jwt": "token",
+              "photo": { "id": 1, "url": "string" }
+            }
+
+        3. Registration Verification Resend
+            (Used when email/SMS was not received)
+            Request
+                {
+                  "username": "email or phone"
+                }
+
+            Response - Status: OK
+
+        4. Authorization (Login)
+            Request
+            {
+              "username": "email or phone",
+              "password": "string"
+            }
+
+            Response
+            {
+              "name": "string",
+              "username": "string",
+              "roleList": ["USER"],
+              "jwt": "token",
+              "photo": { "id": 1, "url": "string" }
+            }
+
+        5. Reset Password
+            Request
+            {
+              "username": "email or phone"
+            }
+
+            Response - Depends on reset logic
+
+
+        6. Reset Password Confirm
+            Request
+            {
+              "username": "email or phone",
+              "confirmCode": "string",
+              "password": "newPassword"
+            }
+
+            Response - Status: OK
+
+
+2. ######## Attach ########
+
+        1. Upload Image (USER, ADMIN)
+            (Book cover upload)
+
+            Response
+            {
+              "id": 1,
+              "url": "string"
+            }
+
+        2. Open Image (ANY)
+
+
+3. ######## Book ########
+        1.+ Create Book (ADMIN)
+
+            Request
+            {
+              "title": "string",
+              "author": "string",
+              "description": "string (min 100 chars)",
+              "category": "string",
+              "publishedYear": 2020,
+              "photo": { "id": 1 }
+            }
+
+            Response
+            {
+              "id": 1,
+              "title": "string",
+              "author": "string",
+              "photo": { "id": 1, "url": "string" },
+              "createdDate": "timestamp"
+            }
+
+        2.+ Book List (Public)
+          (Search + pagination)
+
+            Request
+            Params: page, size
+            Body: { "query": "string" }
+
+            Response
+              {
+                "id": 1,
+                "title": "string",
+                "author": "string",
+                "photo": { "id": 1, "url": "string" },
+                "createdDate": "timestamp"
+              }
+
+        3.+ Book Detail by ID (ANY)
+            Request
+                PathVariable: id
+
+            Response
+            {
+              "id": 1,
+              "title": "string",
+              "author": "string",
+              "description": "string",
+              "category": "string",
+              "publishedYear": 2020,
+              "photo": { "id": 1, "url": "string" },
+              "createdDate": "timestamp"
+            }
+
+        4.+ Update Book (ADMIN)
+            Request
+            Param: id
+            Body: { title, author, description, category, photo{id} }
+
+            Response
+            {
+              "id": 1,
+              "title": "string",
+              "author": "string",
+              "photo": { "id": 1, "url": "string" }
+            }
+
+        5.+ Delete Book (ADMIN)
+
+            Request
+            Param: id
+
+            Response
+            Status: OK
+
+        6.+ Advanced Filter (ADMIN)
+          (Author, category, year, keyword)
+            Request
+            Params: page, size
+            Body: { query }
+
+4. ######## Borrowing ########
+        1.+ Borrow Book (USER)
+            Request
+                Param: bookId
+
+            Response Status: OK
+
+        2.+ Return Book (USER)
+            Request
+                Param: bookId
+
+            Response
+                Status: OK
+
+        3.+ Borrowing History (USER)
+            Response
+                [
+                  {
+                    "book": { "id": 1, "title": "string" },
+                    "borrowDate": "timestamp",
+                    "returnDate": "timestamp"
+                  }
+                ]
+
+        4.+ All Borrowings (ADMIN)
+            Response
+            [
+                {
+                    "borrowId": 1,
+                    "book": {"id": 1, "title": "string" },
+                    "profile": {"id": 1, "username": "string"},
+                    "borrowedDate": timestamp,
+                    "returnedDate": timestamp,
+                    "status": BORROWED/RETURNED
+                }
+            ]
+
+
+5. ######## Profile ########
+        1.+ Get Profile Detail (USER, ADMIN)
+            Response
+                {
+                  "name": "string",
+                  "username": "string",
+                  "roleList": ["USER"],
+                  "photo": { "id": 1, "url": "string" }
+                }
+
+        2.+ Update Profile Detail (USER, ADMIN)
+
+            Request
+                { "name": "string" }
+
+
+        3.+ Update Photo (USER, ADMIN)
+
+        4.+ Update Password (USER, ADMIN)
+
+        5.+ Update Username (Email / Phone) (USER, ADMIN)
+
+        6.+ Update Username Confirm (USER, ADMIN)
+
+        7. Profile List with Pagination (ADMIN)
+                Response
+                [
+                  {
+                    "id": 1,
+                    "name": "string",
+                    "username": "string",
+                    "photo": { "id": 1, "url": "string" },
+                    "borrowCount": 5
+                  }
+                ]
+
+        8.+ Block Profile (ADMIN)
+
+        8.2 + Unblock Profile (ADMIN)
+
+        9. Delete Profile (ADMIN)
+

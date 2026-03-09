@@ -1,0 +1,9 @@
+### Upload Attach
+POST http://localhost:8080/attach/upload
+Content-Type: multipart/form-data
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="default-image-icon.jpeg"
+
+< /Users/alobekm4/Downloads/default-image-icon.jpeg
+--WebAppBoundary--
